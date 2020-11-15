@@ -1,7 +1,16 @@
 package arkham.knight.jwt.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 //Esta clase se encargara de manejar los datos que el usuario mande
+@Entity
 public class AuthenticationRequest {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private String username;
     private String password;
@@ -15,6 +24,10 @@ public class AuthenticationRequest {
         this.password = password;
     }
 
+
+    public Long getId() { return id; }
+
+    public void setId(Long id) { this.id = id; }
 
     public String getUsername() {
         return username;

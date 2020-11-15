@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Service
-public class JwtTokeUtil {
+public class JwtUtil {
 
     //no es recomendable guardar la clave secreta de esta forma ni que sea tan simple tampoco
     private final String secretKey = "secret";
